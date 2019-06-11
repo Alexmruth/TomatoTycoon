@@ -1,0 +1,16 @@
+{
+  "Upgrades": [
+    {"ID": 0, "name": "Item1", "price": 10, "multiplier": 1.1},
+    {"ID": 1, "name": "Item2", "price": 50, "multiplier": 1.1},
+    {"ID": 2, "name": "Item3", "price": 250, "multiplier": 1.1},
+    {"ID": 3, "name": "Item4", "price": 1250, "multiplier": 1.1},
+    {"ID": 4, "name": "Item5", "price": 6500, "multiplier": 1.1},
+    {"ID": 5, "name": "Item6", "price": 32500, "multiplier": 1.1},
+    {"ID": 6, "name": "Item7", "price": 162500, "multiplier": 1.1}
+  ]
+}
+
+
+
+
+
