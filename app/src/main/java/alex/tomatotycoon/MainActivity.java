@@ -3,6 +3,9 @@ package alex.tomatotycoon;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -46,12 +49,7 @@ public class MainActivity extends AppCompatActivity {
         rainProgress = findViewById(R.id.rainProgress);
         rainProgress.setMax(100);
         shopBtn = findViewById(R.id.shopBtn);
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;;
-        int imageViewSize = (int) ((float) width * IMAGE_SCREEN_WIDTH_RATIO);
 
         tomatoImg.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View view, MotionEvent event) {
@@ -67,12 +65,10 @@ public class MainActivity extends AppCompatActivity {
                         rainProgressInt = 0;
                         rainProgress.setProgress(rainProgressInt);
                     }
-                    Log.d("TouchTest", "Touch down");
                     params.height = params.height - 30;
                     params.width = params.width - 30;
                     view.setLayoutParams(params);
                 } else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
-                    Log.d("TouchTest", "Touch up");
                     params.height = params.height + 30;
                     params.width = params.width + 30;
                     view.setLayoutParams(params);
@@ -80,30 +76,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-//        tomatoImg.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                tomatoes = tomatoes + (1*multiplier);
-//                rainProgressInt = rainProgressInt + 1;
-//                countText.setText(String.valueOf(tomatoes));
-//                rainProgress.setProgress(rainProgressInt);
-//
-//                if(rainProgressInt >= 100) {
-//                    tomatoRain();
-//                    rainProgressInt = 0;
-//                    rainProgress.setProgress(rainProgressInt);
-//                }
-//                ViewGroup.LayoutParams params = tomatoImg.getLayoutParams();
-//                if(v.isPressed()) {
-//                    params.height = params.height - 30;
-//                    params.width = params.width - 30;
-//                }
-//            }
-//        });
     }
 
     public void tomatoRain() {
+
     }
 
 
